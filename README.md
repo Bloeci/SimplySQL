@@ -1,0 +1,2 @@
+# SimplySQL
+Pythonic SQL
