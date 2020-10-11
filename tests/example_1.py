@@ -1,4 +1,4 @@
-#! /usr/bin/python3.6
+#! /usr/bin/python3.7.6
 
 """
     Example 1:
@@ -16,7 +16,6 @@ with DataBase("tests/Test.db") as DB:
     datatypes = ["TEXT", "INTEGER", "TEXT"]
 
     DB.create_table("Persons", header, datatypes)
-    DB.create_table("Persons_2", header, datatypes)
 
     # look at all attributes of the database
     # >>> print(DB.attributes())
