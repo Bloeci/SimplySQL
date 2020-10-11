@@ -28,13 +28,13 @@ from simplysql import DataBase
 From this moment the fun can begin. The next step is the assignment of the database. Two methods can be used for this. The first method is a direct assignment (whereby this must be closed again at the end of processing):
 
 ```python
-DB = DataBase("test/Test.db")
+DB = DataBase("tests/Test.db")
 ...
 DB.close()
 ```
 Or you can choose the with-assignment:
 ```python
-with DataBase("test/Test.db") as DB:
+with DataBase("tests/Test.db") as DB:
 ...
 ```
 Grab a table and iterate over all rows:
