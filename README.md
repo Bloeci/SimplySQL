@@ -46,4 +46,10 @@ for row in DBTable.rows():
     
     # first row would be like:: {'name': 'Karl', 'age': 29, 'gender': 'female'}
 ```
-Each entry in a row can be reached by several ways where the assignment via a name depends on the name of the table columns: ```row.name```, ```row["name"]``` or ```row[0]```
+Each entry in a row can be reached by several ways where the assignment via a name depends on the name of the table columns:
+* ```row.name```, ```row["name"]```, ```row.get("name")``` or ```row[0]```
+
+To display the all content of a row you can use this functions and methods:
+* ```row.attribute()```, ```row.data```, ```row.as_list()```, ```row.as_dict()``` or ```row.as_tuple()```
+
+For a complete overview of all functions have a look at the manual and the examples. _>>> coming soon_
