@@ -98,7 +98,7 @@ class DataBase(object):
         if not self.has_tables():
             raise ValueError("DataBase has no tables")
 
-        return self._tables[1]["table"]
+        return self._tables[0]["table"]
 
     def last_table(self) -> DataTable:
         if not self.has_tables():
