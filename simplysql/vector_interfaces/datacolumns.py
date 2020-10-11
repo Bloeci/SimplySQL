@@ -64,8 +64,6 @@ class DataColumns(object):
                 index = len(self) + index
 
             return self.all()[index]
-            # return DataColumn(self.names()[index], self.all()[index],
-            #                   index, self.parent)
 
         raise IndexError("DataColumns has no index={}.".format(index))
 
