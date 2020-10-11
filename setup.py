@@ -1,10 +1,18 @@
-from distutils.core import setup
+import os
+from setuptools import setup
+
+
+def read(fname):
+    return open(os.path.join(os.path.dirname(__file__), fname)).read()
+
 
 setup(name="simplysql",
       packages=["simplysql"],
-      version="0.1.0",
+      version="0.1",
       license="MIT",
       description="Simplified editing of SQL databases (sqlite3) without having to deal with queries!",
+      long_description_content_type="text/markdown",
+      long_description=read("README.md"),
       author="Pit Nahrstedt",
       author_email="luanee@web.de",
       url="https://github.com/Luanee/SimplySQL",
