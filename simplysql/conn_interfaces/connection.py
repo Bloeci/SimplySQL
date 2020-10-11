@@ -1,11 +1,9 @@
 #! /usr/bin/python3.7.6
-
-
 import sqlite3
 
 
 class Connection():
-    def __init__(self, db_path):
+    def __init__(self, db_path: str):
         self._db_path = db_path
         self._cursor = None
         self._connection = None
@@ -40,7 +38,7 @@ class Connection():
     def commit(self):
         self.connection.commit()
 
-    def close(self, commit=True):
+    def close(self, commit: bool = True):
         if commit:
             self.commit()
 
@@ -48,7 +46,7 @@ class Connection():
         self.connection.close()
         self.open = False
 
-    def execute(self, sql, params=None):
+    def execute(self, sql: str, params=None):
         self.cursor.execute(sql, params or ())
         self.commit()
 
@@ -58,9 +56,9 @@ class Connection():
     def fetchone(self):
         return self.cursor.fetchone()
 
-    def query(self, sql, params=None):
+    def query(self, sql: str, params=None):
         self.execute(sql, params or ())
         return self.fetchall()
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return "Connection {}".format("is open" if self.open else "is closed")
